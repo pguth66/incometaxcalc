@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme-black.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+<div class="w3-center">
+<h1 class="w3-xxxlarge">?</h1>
+</div>
+</header>
+
+<div class="w3-padding w3-white w3-center">
+<p>
+Please type in your estimated AGI, in dollars, then hit the button.
+</p>
+
+<input id="networth" type="number" min="0" max="10000000000" step="100000" required>
+
+<button type="button" onclick="incomeTaxCalc()">Show me my tax!</button>
+
+<!-- this is where the message about owing no tax will show up -->
+<p id="demo"> </p>
+</div>
+
+<!-- this is where the table showing the tax will appear -->
+<div id="tableholder" class="w3-responsive w3-card-4">
+</div>
+
+<!-- for showing the notes only after someone types in their number -->
+<style>
+div.hidden {
+	display: none
+}
+</style>
+
+<!-- notes go here in the footer -->
+<div id="footer" class="w3-container w3-footer hidden">
+<p>
+
+</p>
+</div>
+
+<!-- functions to format money -->
+<script src="js/accounting.js">
+</script>
+
+<!-- functions to draw and populate the table of results -->
+<script src="js/drawtable.js">
+</script>
+
+<!-- functions to calculate the tax etc -->
+<script src="js/incometax.js">
+</script>
+</html>
+
